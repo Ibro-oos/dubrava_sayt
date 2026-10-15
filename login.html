@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход в личный кабинет - «Дубрава»</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth-styles.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-top">
+            <a href="index.html" class="logo">ДУБРАВА<span>.</span></a>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="cart.html" title="Корзина">🛒</a>
+                <a href="auth-choice.html" title="Личный кабинет">👤</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-section">
+        <div class="container">
+            <div class="auth-card">
+                <h1>Авторизация</h1>
+                <p class="auth-subtitle">Введите логин и пароль для входа в свой кабинет</p>
+
+                <form action="#" method="POST" class="auth-form">
+                    <div class="form-group">
+                        <label for="email">Электронная почта или телефон</label>
+                        <input type="text" id="email" name="email" placeholder="example@mail.ru" required>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="label-row">
+                            <label for="password">Пароль</label>
+                            <a href="#" class="forgot-password">Забыли пароль?</a>
+                        </div>
+                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" checked>
+                            <span>Запомнить меня</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn btn-accent btn-block">Войти</button>
+                </form>
+
+                <div class="auth-divider"><span>или</span></div>
+
+                <div class="auth-switch">
+                    Еще нет аккаунта? <a href="register.html">Зарегистрироваться</a>
+                </div>
+
+                <div class="auth-footer-note">
+                    <a href="auth-choice.html" class="back-link">← Назад к выбору</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Мебельная фабрика «Дубрава». Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
