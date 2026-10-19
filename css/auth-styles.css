@@ -227,3 +227,14 @@
     background-color: #FFFFFF; 
     border-color: #a8885a;
 }
+
+.error-msg {
+  color: #d93025;
+  font-size: 13px;
+  margin-top: 4px;
+  min-height: 0;
+}
+
+.input-error {
+  border-color: #d93025 !important;
+}
