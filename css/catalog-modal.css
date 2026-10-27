@@ -1,0 +1,87 @@
+.product-card { cursor: pointer; }
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.65);
+    display: flex;
+    align-items: center;    
+    justify-content: center; 
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 99999;       
+    animation: modal-fade 0.2s ease;
+}
+
+.modal.hidden { display: none !important; }
+
+/* Пометка: блокировка прокрутки страницы пока открыто окно */
+body.no-scroll { overflow: hidden; }
+
+.modal-content {
+    position: relative;
+    background: #fff;
+    border-radius: var(--radius, 8px);
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    animation: modal-pop 0.25s ease;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 18px;
+    font-size: 32px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.close:hover { color: #c0392b; }
+
+.detail-img {
+    width: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    border-radius: var(--radius, 8px);
+    margin: 15px 0;
+}
+.bay{
+    display: inline-block; 
+    padding: 10px; 
+    background: #2c1810; 
+    color: #fff; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font: inherit; 
+    font-size: 15px; 
+    transition: 0.3s ease; 
+}
+
+.bay:hover { 
+    background: #a8885a; 
+    color: #fff; 
+}
+
+.detail-desc { margin-bottom: 15px; }
+
+.detail-specs ul { list-style: none; padding: 0; }
+.detail-specs li { padding: 6px 0; border-bottom: 1px solid var(--border, #ddd); }
+
+@keyframes modal-fade {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes modal-pop {
+    from { transform: scale(0.92); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}

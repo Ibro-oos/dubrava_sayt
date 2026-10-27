@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог - Дубрава</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/catalog-modal.css">
 </head>
 <body>
 
@@ -32,7 +33,7 @@
 <section class="section">
     <div class="container">
         <h1 class="section-title">Каталог мебели</h1>
-        <p class="section-subtitle">Найдено 24 товара</p>
+        <p class="section-subtitle" id="count">Загрузка...</p>
 
         <div class="catalog-layout">
             <aside class="filters">
@@ -61,75 +62,17 @@
                 <button class="btn" style="width:100%;">Применить</button>
             </aside>
 
-            <div class="grid-3">
-                <a href="product.html" class="product-card">
-                    <img src="images/sofa_verona.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Диваны</div>
-                        <h3>Диван «Верона»</h3>
-                        <div class="product-price">
-                            <span class="price">89 900 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <img src="images/table_provence.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Столы</div>
-                        <h3>Стол «Прованс»</h3>
-                        <div class="product-price">
-                            <span class="price">54 500 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <img src="images/bed_aurora.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Кровати</div>
-                        <h3>Кровать «Аврора»</h3>
-                        <div class="product-price">
-                            <span class="price">72 000 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <img src="images/cabinet_monaco.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Шкафы</div>
-                        <h3>Шкаф «Монако»</h3>
-                        <div class="product-price">
-                            <span class="price">115 000 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <img src="images/chair_lyon.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Стулья</div>
-                        <h3>Стул «Лион»</h3>
-                        <div class="product-price">
-                            <span class="price">12 400 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-                <a href="product.html" class="product-card">
-                    <img src="images/kids_bed_malysh.jpg" alt="">
-                    <div class="product-info">
-                        <div class="category">Детская</div>
-                        <h3>Кровать «Малыш»</h3>
-                        <div class="product-price">
-                            <span class="price">38 900 ₽</span>
-                            <button class="btn btn-accent">В корзину</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <div id="product-grid" class="grid-3"></div>
         </div>
+    </div>
+</section>
+
+<!-- модальное окно -->
+<section id="detail-section" class="modal hidden">
+    <div class="modal-content">
+        <span id="close-btn" class="close">&times;</span>
+        <div id="detail-card"></div>
+        <button class="bay" style="width:100%";> Купить </button>
     </div>
 </section>
 
@@ -139,5 +82,6 @@
     </div>
 </footer>
 
+<script src="js/catalog.js"></script>
 </body>
 </html>
